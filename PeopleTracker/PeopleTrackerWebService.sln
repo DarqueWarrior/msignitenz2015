@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PeopleTracker.Database", "src\PeopleTracker.Database\PeopleTracker.Database.sqlproj", "{ACDB58DE-A861-4FC0-B614-E427F2B981A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleTracker.DAL", "src\PeopleTracker.DAL\PeopleTracker.DAL.csproj", "{2D64DCB7-F73C-4A0A-8FBB-84FDD3B9D5F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleTracker.NetService", "src\PeopleTracker.NetService\PeopleTracker.NetService.csproj", "{57F326A0-CD15-40BE-B692-66B7C133F9A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleTracker.NetService.Tests", "src\PeopleTracker.NetService.Tests\PeopleTracker.NetService.Tests.csproj", "{14ED85EE-2C8A-4B5E-A8EE-7A2CB7B4194A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleTracker.UITests", "src\PeopleTracker.UITests\PeopleTracker.UITests.csproj", "{617FB1A1-E4C2-42AD-BB9A-A44B395B57BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACDB58DE-A861-4FC0-B614-E427F2B981A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACDB58DE-A861-4FC0-B614-E427F2B981A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACDB58DE-A861-4FC0-B614-E427F2B981A5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ACDB58DE-A861-4FC0-B614-E427F2B981A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACDB58DE-A861-4FC0-B614-E427F2B981A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACDB58DE-A861-4FC0-B614-E427F2B981A5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2D64DCB7-F73C-4A0A-8FBB-84FDD3B9D5F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D64DCB7-F73C-4A0A-8FBB-84FDD3B9D5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D64DCB7-F73C-4A0A-8FBB-84FDD3B9D5F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D64DCB7-F73C-4A0A-8FBB-84FDD3B9D5F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57F326A0-CD15-40BE-B692-66B7C133F9A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F326A0-CD15-40BE-B692-66B7C133F9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F326A0-CD15-40BE-B692-66B7C133F9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F326A0-CD15-40BE-B692-66B7C133F9A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14ED85EE-2C8A-4B5E-A8EE-7A2CB7B4194A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14ED85EE-2C8A-4B5E-A8EE-7A2CB7B4194A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14ED85EE-2C8A-4B5E-A8EE-7A2CB7B4194A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14ED85EE-2C8A-4B5E-A8EE-7A2CB7B4194A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{617FB1A1-E4C2-42AD-BB9A-A44B395B57BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617FB1A1-E4C2-42AD-BB9A-A44B395B57BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617FB1A1-E4C2-42AD-BB9A-A44B395B57BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617FB1A1-E4C2-42AD-BB9A-A44B395B57BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
