@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachineLocation": {
+            "value": "eastus2"
+        },
+        "imagePublisher": {
+            "value": "Canonical"
+        },
+        "imageOffer": {
+            "value": "UbuntuServer"
+        },
+        "imageSku": {
+            "value": "15.04"
+        },
+        "dnsNameForPublicIP": {
+            "value": "qadockerhost"
+        },
+        "virtualMachineSize": {
+            "value": "Basic_A0"
+        },
+        "adminUsername": {
+            "value": "dbrown"
+        },
+        "newStorageAccountName": {
+            "value": "qadockerhost992f8d8f"
+        }
+    }
+}
