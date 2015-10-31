@@ -4,7 +4,7 @@ Set-ExecutionPolicy unrestricted -Scope CurrentUser -Force
 dnvm setup 
 
 # Set runtime to use 
-dnvm use 1.0.0-beta7 
+dnvm use 1.0.0-beta8 
 
 # Run the test 
 dnx test 
