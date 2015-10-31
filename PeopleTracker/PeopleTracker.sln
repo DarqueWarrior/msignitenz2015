@@ -32,6 +32,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{
 		PublishScripts\Templates\PeopleTracker.PreviewDockerVM.param.dev.json = PublishScripts\Templates\PeopleTracker.PreviewDockerVM.param.dev.json
 	EndProjectSection
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PeopleTracker.Preview.Tests", "src\PeopleTracker.Preview.Tests\PeopleTracker.Preview.Tests.xproj", "{02655A6A-250A-4CA8-BA5E-0D804053C791}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{82013758-9AA5-4016-8667-D02A25A55277}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82013758-9AA5-4016-8667-D02A25A55277}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82013758-9AA5-4016-8667-D02A25A55277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02655A6A-250A-4CA8-BA5E-0D804053C791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02655A6A-250A-4CA8-BA5E-0D804053C791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02655A6A-250A-4CA8-BA5E-0D804053C791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02655A6A-250A-4CA8-BA5E-0D804053C791}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{82013758-9AA5-4016-8667-D02A25A55277} = {961616F9-35AE-4E72-9A18-AF959DE5EBDE}
 		{FDFEAAE2-4BEA-4EEA-AE2D-AAD8F2FF230F} = {292764FE-43C2-453D-ACEE-830A2DB859AB}
 		{7B2651D4-CFCA-4B4D-A606-781664A00043} = {292764FE-43C2-453D-ACEE-830A2DB859AB}
+		{02655A6A-250A-4CA8-BA5E-0D804053C791} = {961616F9-35AE-4E72-9A18-AF959DE5EBDE}
 	EndGlobalSection
 EndGlobal
