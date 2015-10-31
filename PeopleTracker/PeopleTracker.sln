@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{961616F9-35AE-4E72-9A18-AF959DE5EBDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D120E22D-6564-45D7-85F9-3094C7FD3D4C}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		NuGet.Config = NuGet.Config
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PeopleTracker.Preview", "src\PeopleTracker.Preview\PeopleTracker.Preview.xproj", "{82013758-9AA5-4016-8667-D02A25A55277}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{292764FE-43C2-453D-ACEE-830A2DB859AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{FDFEAAE2-4BEA-4EEA-AE2D-AAD8F2FF230F}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\Deploy-DockerAzureResourceGroup-2.ps1 = PublishScripts\Scripts\Deploy-DockerAzureResourceGroup-2.ps1
+		PublishScripts\Scripts\Deploy-DockerAzureResourceGroup-3.ps1 = PublishScripts\Scripts\Deploy-DockerAzureResourceGroup-3.ps1
+		PublishScripts\Scripts\Deploy-DockerAzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-DockerAzureResourceGroup.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{7B2651D4-CFCA-4B4D-A606-781664A00043}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\PeopleTracker.PreviewDockerVM-2.json = PublishScripts\Templates\PeopleTracker.PreviewDockerVM-2.json
+		PublishScripts\Templates\PeopleTracker.PreviewDockerVM-3.json = PublishScripts\Templates\PeopleTracker.PreviewDockerVM-3.json
+		PublishScripts\Templates\PeopleTracker.PreviewDockerVM.json = PublishScripts\Templates\PeopleTracker.PreviewDockerVM.json
+		PublishScripts\Templates\PeopleTracker.PreviewDockerVM.param.dev-2.json = PublishScripts\Templates\PeopleTracker.PreviewDockerVM.param.dev-2.json
+		PublishScripts\Templates\PeopleTracker.PreviewDockerVM.param.dev-3.json = PublishScripts\Templates\PeopleTracker.PreviewDockerVM.param.dev-3.json
+		PublishScripts\Templates\PeopleTracker.PreviewDockerVM.param.dev.json = PublishScripts\Templates\PeopleTracker.PreviewDockerVM.param.dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82013758-9AA5-4016-8667-D02A25A55277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82013758-9AA5-4016-8667-D02A25A55277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82013758-9AA5-4016-8667-D02A25A55277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82013758-9AA5-4016-8667-D02A25A55277}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82013758-9AA5-4016-8667-D02A25A55277} = {961616F9-35AE-4E72-9A18-AF959DE5EBDE}
+		{FDFEAAE2-4BEA-4EEA-AE2D-AAD8F2FF230F} = {292764FE-43C2-453D-ACEE-830A2DB859AB}
+		{7B2651D4-CFCA-4B4D-A606-781664A00043} = {292764FE-43C2-453D-ACEE-830A2DB859AB}
+	EndGlobalSection
+EndGlobal
