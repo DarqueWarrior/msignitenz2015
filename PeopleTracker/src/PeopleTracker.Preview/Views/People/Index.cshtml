@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PeopleTracker.Preview.Models.Person>
+
+@{
+   ViewBag.Title = "People";
+}
+
+<h2>Index</h2>
+
+<p>
+   <a asp-controller="People" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+   <tr>
+      <th>
+         @Html.DisplayNameFor(model => model.FirstName)
+      </th>
+      <th>
+         @Html.DisplayNameFor(model => model.LastName)
+      </th>
+      <th></th>
+   </tr>
+
+   @foreach (var item in Model)
+   {
+      <tr>
+         <td>
+            @item.FirstName
+         </td>
+         <td>
+            @item.LastName
+         </td>
+         <td>
+            <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+         </td>
+      </tr>
+   }
+
+</table>
