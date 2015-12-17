@@ -1,35 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Mvc;
-
-namespace PeopleTracker.Preview.Controllers
+﻿namespace PeopleTracker.Preview.Controllers
 {
-    public class HomeController : Controller
-    {
-        public IActionResult Index()
-        {
-            return View();
-        }
+   using Microsoft.AspNet.Mvc;
+   using Microsoft.Framework.OptionsModel;
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
+   public class HomeController : Controller
+   {
+      private IOptions<SiteOptions> siteOptions;
 
-            return View();
-        }
+      public HomeController(IOptions<SiteOptions> options)
+      {
+         this.siteOptions = options;
+      }
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
+      public IActionResult Index()
+      {
+         SetCopyright();
 
-            return View();
-        }
+         return View();
+      }
 
-        public IActionResult Error()
-        {
-            return View("~/Views/Shared/Error.cshtml");
-        }
-    }
+      private void SetCopyright()
+      {
+         ViewData["WebApiBaseUrl"] = string.Format("{0} - build: {1}", this.siteOptions.Value.WebApiBaseUrl, this.siteOptions.Value.BuildNumber);
+      }
+
+      public IActionResult About()
+      {
+         ViewData["Message"] = "People Tracker is a demo application that shows the power of Microsoft DevOps.";
+         SetCopyright();
+
+         return View();
+      }
+
+      public IActionResult Contact()
+      {
+         ViewData["Message"] = "Follow me on Twitter to stay connected to Microsoft DevOps.";
+         SetCopyright();
+
+         return View();
+      }
+
+      public IActionResult Error()
+      {
+         SetCopyright();
+         return View("~/Views/Shared/Error.cshtml");
+      }
+   }
 }
