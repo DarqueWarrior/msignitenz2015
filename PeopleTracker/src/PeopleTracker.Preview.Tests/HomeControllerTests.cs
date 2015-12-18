@@ -8,7 +8,7 @@ namespace PeopleTracker.Preview.Tests
       public void Index()
       {
          // Arrange
-         var target = new PeopleTracker.Preview.Controllers.HomeController(null);
+         var target = new PeopleTracker.Preview.Controllers.HomeController(new FakeOptions(new SiteOptions()));
 
          // Act
          var results = target.Index();
