@@ -2,7 +2,7 @@
 {
    using Microsoft.AspNet.Mvc;
    using Microsoft.Framework.OptionsModel;
-   
+
    public class HomeController : Controller
    {
       private IOptions<SiteOptions> siteOptions;

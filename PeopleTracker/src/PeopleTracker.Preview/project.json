@@ -14,10 +14,10 @@
       "Microsoft.Framework.Logging": "1.0.0-beta8",
       "Microsoft.Framework.Logging.Console": "1.0.0-beta8",
       "Microsoft.Framework.Logging.Debug": "1.0.0-beta8",
-      "Microsoft.Net.Http": "2.2.29",
       "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta8",
       "System.Net.Http": "4.0.0",
-      "Microsoft.AspNet.WebApi.Client":  "5.2.3"
+      "Microsoft.AspNet.WebApi.Client": "5.2.3",
+            "Microsoft.Net.Http": "2.2.29"
    },
 
     "commands": {
@@ -26,7 +26,8 @@
     },
 
     "frameworks": {
-      "dnx451": { },
+      "dnx451": {
+      },
         "dnxcore50": { }
     },
 

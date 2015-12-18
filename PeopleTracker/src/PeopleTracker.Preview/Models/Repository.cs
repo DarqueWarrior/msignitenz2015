@@ -20,7 +20,6 @@
          get
          {
             var client = GetClient();
-
             var response = client.GetAsync("api/People").Result;
 
             if (response.IsSuccessStatusCode)
