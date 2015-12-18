@@ -1,10 +1,12 @@
 ﻿namespace PeopleTracker.UITests
 {
    using Microsoft.VisualStudio.TestTools.UnitTesting;
+   using OpenQA.Selenium;
    using OpenQA.Selenium.Chrome;
    using OpenQA.Selenium.Firefox;
    using OpenQA.Selenium.IE;
    using OpenQA.Selenium.Remote;
+   using System;
 
    [TestClass]
    public class UnitTest1
@@ -15,8 +17,24 @@
       public TestContext TestContext { get; set; }
 
       [TestMethod]
-      public void TestMethod1()
+      [TestCategory("UI")]
+      public void AddPerson()
       {
+         driver.Manage().Window.Maximize();
+         driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
+
+         driver.Navigate().GoToUrl(this.baseURL);
+         driver.FindElementByLinkText("People").Click();
+         driver.FindElementByLinkText("Create New").Click();
+         driver.FindElementById("FirstName").Clear();
+         driver.FindElementById("FirstName").SendKeys(browser);
+         driver.FindElementById("LastName").Clear();
+         driver.FindElementById("LastName").SendKeys("User");
+         driver.FindElementByCssSelector("input.btn").Click();
+
+         // Force chrome to slow down so the click is registered
+         var wait = new OpenQA.Selenium.Support.UI.WebDriverWait(driver, TimeSpan.FromSeconds(30));
+         wait.Until(driver1 => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
       }
 
       /// <summary>
