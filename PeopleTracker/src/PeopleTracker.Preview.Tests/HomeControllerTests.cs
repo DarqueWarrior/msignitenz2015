@@ -1,7 +1,7 @@
-﻿using Xunit;
-
-namespace PeopleTracker.Preview.Tests
+﻿namespace PeopleTracker.Preview.Tests
 {
+   using Xunit;
+
    public class HomeControllerTests
    {
       [Fact]
