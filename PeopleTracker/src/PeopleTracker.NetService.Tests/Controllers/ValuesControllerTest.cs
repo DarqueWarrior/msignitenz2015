@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Web.Http;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PeopleTracker.NetService;
-using PeopleTracker.NetService.Controllers;
-
-namespace PeopleTracker.NetService.Tests.Controllers
+﻿namespace PeopleTracker.NetService.Tests.Controllers
 {
+   using Microsoft.VisualStudio.TestTools.UnitTesting;
+   using PeopleTracker.NetService.Controllers;
+   using System.Collections.Generic;
+   using System.Linq;
+
    [TestClass]
    public class ValuesControllerTest
    {
       [TestMethod]
+      [TestCategory("Unit")]
       public void Get()
       {
          // Arrange
@@ -30,6 +26,7 @@ namespace PeopleTracker.NetService.Tests.Controllers
       }
 
       [TestMethod]
+      [TestCategory("Unit")]
       public void GetById()
       {
          // Arrange
@@ -43,6 +40,7 @@ namespace PeopleTracker.NetService.Tests.Controllers
       }
 
       [TestMethod]
+      [TestCategory("Unit")]
       public void Post()
       {
          // Arrange
@@ -55,6 +53,7 @@ namespace PeopleTracker.NetService.Tests.Controllers
       }
 
       [TestMethod]
+      [TestCategory("Unit")]
       public void Put()
       {
          // Arrange
@@ -67,6 +66,7 @@ namespace PeopleTracker.NetService.Tests.Controllers
       }
 
       [TestMethod]
+      [TestCategory("Unit")]
       public void Delete()
       {
          // Arrange

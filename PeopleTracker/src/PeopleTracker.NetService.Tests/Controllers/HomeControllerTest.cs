@@ -1,14 +1,14 @@
-﻿using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PeopleTracker.NetService;
-using PeopleTracker.NetService.Controllers;
-
-namespace PeopleTracker.NetService.Tests.Controllers
+﻿namespace PeopleTracker.NetService.Tests.Controllers
 {
+   using Microsoft.VisualStudio.TestTools.UnitTesting;
+   using PeopleTracker.NetService.Controllers;
+   using System.Web.Mvc;
+
    [TestClass]
    public class HomeControllerTest
    {
       [TestMethod]
+      [TestCategory("Unit")]
       public void Index()
       {
          // Arrange
