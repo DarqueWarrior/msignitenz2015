@@ -151,6 +151,12 @@ function Publish-DockerContainerApp {
         $command | Execute-CommandString | Write-Verbose
         'The Docker image "{0}" was created successfully.' -f $imageName | Write-Output
 
+        Write-Verbose 'Time to push to Docker Hub'
+        $command = 'docker{0} -H {1} push {2}' -f $authOptions, $dockerServerUrl, $imageName
+        $command | Print-CommandString
+        $command | Execute-CommandString | Write-Verbose
+        'The Docker image "{0}" was pushed successfully.' -f $imageName | Write-Output
+
         if (!$buildOnly) {
             $publishPort = ''
             $envVars = ''
