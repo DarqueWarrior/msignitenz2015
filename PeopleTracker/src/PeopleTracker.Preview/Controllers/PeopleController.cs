@@ -26,7 +26,7 @@
 
       [HttpPost]
       [ValidateAntiForgeryToken]
-      public ActionResult Create([Bind("ID", "FirstName", "LastName")] Person person)
+      public ActionResult Create([Bind("FirstName", "LastName")] Person person)
       {
          ViewData["WebApiBaseUrl"] = this.siteOptions.Value.WebApiBaseUrl;
 
