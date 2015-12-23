@@ -143,19 +143,7 @@ function Publish-DockerContainerApp {
                 }
                 'Conflicting container(s) "{0}" was removed successfully.' -f $conflictingContainerIds | Write-Output
             }
-        }
-
-        'Building Docker image: {0}' -f $imageName | Write-Verbose
-        $command = 'docker{0} -H {1} build -t {2} -f "{3}" "{4}"' -f $authOptions, $dockerServerUrl, $imageName, $dockerfilePath, $packOutput
-        $command | Print-CommandString
-        $command | Execute-CommandString | Write-Verbose
-        'The Docker image "{0}" was created successfully.' -f $imageName | Write-Output
-       
-        Write-Verbose 'Time to push to Docker Hub'
-        $command = 'docker{0} -H {1} push {2}' -f $authOptions, $dockerServerUrl, $imageName
-        $command | Print-CommandString
-        $command | Execute-CommandString | Write-Verbose
-        'The Docker image "{0}" was pushed successfully.' -f $imageName | Write-Output
+        }        
 
         if (!$buildOnly) {
             $publishPort = ''
@@ -200,6 +188,19 @@ function Publish-DockerContainerApp {
             'Publish completed successfully.' | Write-Output
         }
         else {
+
+           'Building Docker image: {0}' -f $imageName | Write-Verbose
+           $command = 'docker{0} -H {1} build -t {2} -f "{3}" "{4}"' -f $authOptions, $dockerServerUrl, $imageName, $dockerfilePath, $packOutput
+           $command | Print-CommandString
+           $command | Execute-CommandString | Write-Verbose
+           'The Docker image "{0}" was created successfully.' -f $imageName | Write-Output
+       
+           Write-Verbose 'Time to push to Docker Hub'
+           $command = 'docker{0} -H {1} push {2}' -f $authOptions, $dockerServerUrl, $imageName
+           $command | Print-CommandString
+           $command | Execute-CommandString | Write-Verbose
+           'The Docker image "{0}" was pushed successfully.' -f $imageName | Write-Output
+
             'Publish completed successfully. The container was not started because the DockerBuildOnly flag was set to True' | Write-Output
         }
     }
