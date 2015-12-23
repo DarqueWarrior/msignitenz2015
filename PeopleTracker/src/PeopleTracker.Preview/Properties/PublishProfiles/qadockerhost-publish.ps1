@@ -95,6 +95,7 @@ function Publish-DockerContainerApp {
         $siteUrlToLaunchAfterPublish = $publishProperties["SiteUrlToLaunchAfterPublish"]
         $launchSiteAfterPublish = [System.Convert]::ToBoolean($publishProperties["LaunchSiteAfterPublish"])
         $createWindowsContainer = [System.Convert]::ToBoolean($publishProperties["CreateWindowsContainer"])
+        $addEnvVars = $publishProperties["DockerEnvVars"]
 
         '==== Publish Settings ====' | Write-Verbose
         'Package output path: {0}' -f $packOutput | Write-Verbose
@@ -152,7 +153,7 @@ function Publish-DockerContainerApp {
 
             if ($hostPort -and $containerPort) {
                 $publishPort = ' -p {0}:{1}' -f $hostPort, $containerPort
-                if ($appType -eq "Web") { $envVars = ' -e "server.urls=http://*:{0}"' -f $containerPort }
+                if ($appType -eq "Web") { $envVars = ' -e "server.urls=http://*:{0}" {1}' -f $containerPort, $addEnvVars }
                 if ($createWindowsContainer) { $containerName = ' --name {0}_{1}' -f $hostPort, $containerPort }
             }
 
